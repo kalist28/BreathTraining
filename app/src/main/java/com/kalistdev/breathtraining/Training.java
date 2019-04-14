@@ -21,10 +21,10 @@ class Training {
     private int exhale;
 
     /** Время паузы после вдоха.*/
-    private int pause_a;
+    private int pauseAfterInhale;
 
     /** Время паузы после выдоха.*/
-    private int pause_b;
+    private int pauseAfterExhale;
 
     /** Время полной тренировки.*/
     private int time;
@@ -35,22 +35,23 @@ class Training {
      * @param name - название тренировки.
      * @param inhale - время для вдоха.
      * @param exhale - время для выдоха.
-     * @param pause_a - время паузы после вдоха.
-     * @param pause_b - время паузы после выдоха.
+     * @param pauseAfterInhale - время паузы после вдоха.
+     * @param pauseAfterExhale - время паузы после выдоха.
      * @param time - время полной тренировки.
      */
-    Training(int id, String name, int inhale, int exhale, int pause_a, int pause_b, int time) {
+    Training(final int id, final String name, final int inhale, final int exhale,
+             final int pauseAfterInhale, final int pauseAfterExhale, final int time) {
         this.id = id;
         this.name = name;
         this.inhale = inhale;
         this.exhale = exhale;
-        this.pause_a = pause_a;
-        this.pause_b = pause_b;
+        this.pauseAfterInhale = pauseAfterInhale;
+        this.pauseAfterExhale = pauseAfterExhale;
         this.time = time;
     }
 
     /**
-     * Функция получения уникального номера тренировки {@link Training#id}
+     * Функция получения уникального номера тренировки {@link Training#id}.
      * @return возвращает уникальный номер тренировки.
      */
     int getId() {
@@ -58,7 +59,7 @@ class Training {
     }
 
     /**
-     * Функция получения названия тренировки {@link Training#name}
+     * Функция получения названия тренировки {@link Training#name}.
      * @return возвращает название тренировки.
      */
     String getName() {
@@ -66,7 +67,7 @@ class Training {
     }
 
     /**
-     * Функция получения времени на вдох {@link Training#inhale}
+     * Функция получения времени на вдох {@link Training#inhale}.
      * @return возвращает время для вдоха.
      */
     int getInhale() {
@@ -74,7 +75,7 @@ class Training {
     }
 
     /**
-     * Функция получения времени на выдох {@link Training#exhale}
+     * Функция получения времени на выдох {@link Training#exhale}.
      * @return возвращает время для выдоха.
      */
     int getExhale() {
@@ -82,23 +83,23 @@ class Training {
     }
 
     /**
-     * Функция получения времени на паузу после вдоха {@link Training#pause_a}
+     * Функция получения времени на паузу после вдоха {@link Training#pauseAfterInhale}.
      * @return возвращает время паузы после вдоха.
      */
-    int getPause_a() {
-        return pause_a;
+    int getPauseAfterInhale() {
+        return pauseAfterInhale;
     }
 
     /**
-     * Функция получения времени на паузу после выдоха {@link Training#pause_b}
+     * Функция получения времени на паузу после выдоха {@link Training#pauseAfterExhale}.
      * @return возвращает время паузы после выдоха.
      */
-    int getPause_b() {
-        return pause_b;
+    int getPauseAfterExhale() {
+        return pauseAfterExhale;
     }
 
     /**
-     * Функция получения времени полной тренировки {@link Training#time}
+     * Функция получения времени полной тренировки {@link Training#time}.
      * @return возвращает время полной тренировки.
      */
     int getTime() {
