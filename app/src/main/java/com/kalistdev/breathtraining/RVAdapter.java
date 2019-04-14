@@ -46,9 +46,9 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> {
         v.name.setText(trainings.get(i).getName());
         v.params.setText("Параметры: " +
                 trainings.get(i).getInhale() + ", " +
-                trainings.get(i).getPause_a() + ", " +
+                trainings.get(i).getPauseAfterInhale() + ", " +
                 trainings.get(i).getExhale() + ", " +
-                trainings.get(i).getPause_b() + ".");
+                trainings.get(i).getPauseAfterExhale() + ".");
         v.time.setText("Время тренировки: " + trainings.get(i).getTime() + " мин.");
 
         v.cardView.setOnClickListener(new View.OnClickListener() {
@@ -60,8 +60,8 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> {
                     intent.putExtra("AllTime", trainings.get(i).getTime());
                     intent.putExtra("Inhale",  trainings.get(i).getInhale());
                     intent.putExtra("Exhale",  trainings.get(i).getExhale());
-                    intent.putExtra("Pause_a", trainings.get(i).getPause_a());
-                    intent.putExtra("Pause_b", trainings.get(i).getPause_b());
+                    intent.putExtra("Pause_a", trainings.get(i).getPauseAfterInhale());
+                    intent.putExtra("Pause_b", trainings.get(i).getPauseAfterExhale());
                     view.getContext().startActivity(intent);
                 }else{
                     v.linearLayout.setVisibility(View.GONE);

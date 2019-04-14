@@ -1,7 +1,7 @@
 package com.kalistdev.breathtraining;
 
 /**
- * Класс описывающий обьект квадратной тренировки дыхания.
+ * The class describes object square technique breathing exercises.
  *
  * @author Dmitriy Kalistratov kalistratov.d.m@gmail.com
  * @version 1.0
@@ -9,28 +9,28 @@ package com.kalistdev.breathtraining;
 class Training {
 
     /** Уникальный номер тренировки. */
-    private int id;
+    private int mId;
 
     /** Название тренировки.*/
-    private String name;
+    private String mName;
 
     /** Время для вдоха.*/
-    private int inhale;
+    private int mInhale;
 
     /** Время для выдоха.*/
-    private int exhale;
+    private int mExhale;
 
     /** Время паузы после вдоха.*/
-    private int pauseAfterInhale;
+    private int mPauseAfterInhale;
 
     /** Время паузы после выдоха.*/
-    private int pauseAfterExhale;
+    private int mPauseAfterExhale;
 
     /** Время полной тренировки.*/
-    private int time;
+    private int mTime;
 
     /**
-     * Конструктор - создание нового объекта с полной инициализацией.
+     * Constructor - create a new object with full initialization.
      * @param id - уникальный номер тренировки.
      * @param name - название тренировки.
      * @param inhale - время для вдоха.
@@ -39,70 +39,71 @@ class Training {
      * @param pauseAfterExhale - время паузы после выдоха.
      * @param time - время полной тренировки.
      */
-    Training(final int id, final String name, final int inhale, final int exhale,
-             final int pauseAfterInhale, final int pauseAfterExhale, final int time) {
-        this.id = id;
-        this.name = name;
-        this.inhale = inhale;
-        this.exhale = exhale;
-        this.pauseAfterInhale = pauseAfterInhale;
-        this.pauseAfterExhale = pauseAfterExhale;
-        this.time = time;
+    Training(final int id, final String name, final int inhale,
+             final int exhale, final int pauseAfterInhale,
+             final int pauseAfterExhale, final int time) {
+        this.mId = id;
+        this.mName = name;
+        this.mInhale = inhale;
+        this.mExhale = exhale;
+        this.mPauseAfterInhale = pauseAfterInhale;
+        this.mPauseAfterExhale = pauseAfterExhale;
+        this.mTime = time;
     }
 
     /**
-     * Функция получения уникального номера тренировки {@link Training#id}.
-     * @return возвращает уникальный номер тренировки.
+     * Function to get value of field {@link Training#mId}.
+     * @return returns the unique number of the workout.
      */
     int getId() {
-        return id;
+        return mId;
     }
 
     /**
-     * Функция получения названия тренировки {@link Training#name}.
-     * @return возвращает название тренировки.
+     * Function to get value of field {@link Training#mName}.
+     * @return returns the name of the workout.
      */
     String getName() {
-        return name;
+        return mName;
     }
 
     /**
-     * Функция получения времени на вдох {@link Training#inhale}.
-     * @return возвращает время для вдоха.
+     * Function to get value of field {@link Training#mInhale}.
+     * @return returns the time to take a breath.
      */
     int getInhale() {
-        return inhale;
+        return mInhale;
     }
 
     /**
-     * Функция получения времени на выдох {@link Training#exhale}.
-     * @return возвращает время для выдоха.
+     * Function to get value of field {@link Training#mExhale}.
+     * @return returns the time to exhale.
      */
     int getExhale() {
-        return exhale;
+        return mExhale;
     }
 
     /**
-     * Функция получения времени на паузу после вдоха {@link Training#pauseAfterInhale}.
-     * @return возвращает время паузы после вдоха.
+     * Function to get value of field {@link Training#mPauseAfterInhale}.
+     * @return returns the time of the pause after a breath.
      */
     int getPauseAfterInhale() {
-        return pauseAfterInhale;
+        return mPauseAfterInhale;
     }
 
     /**
-     * Функция получения времени на паузу после выдоха {@link Training#pauseAfterExhale}.
-     * @return возвращает время паузы после выдоха.
+     * Function to get value of field {@link Training#mPauseAfterExhale}.
+     * @return returns the time of the pause after the exhale.
      */
     int getPauseAfterExhale() {
-        return pauseAfterExhale;
+        return mPauseAfterExhale;
     }
 
     /**
-     * Функция получения времени полной тренировки {@link Training#time}.
-     * @return возвращает время полной тренировки.
+     * Function to get value of field {@link Training#mTime}.
+     * @return returns the time of full training.
      */
     int getTime() {
-        return time;
+        return mTime;
     }
 }
