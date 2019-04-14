@@ -40,6 +40,7 @@ public class ListFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         dataBaseHelper = new DataBaseHelper(getContext());
         recyclerView = view.findViewById(R.id.rv);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -59,7 +60,7 @@ public class ListFragment extends Fragment {
         });
     }
 
-     static void UpdateList(View view){
+    private static void UpdateList(View view){
         SQLiteDatabase sqLiteDatabase = dataBaseHelper.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("select * from " + DataBaseHelper.DATABASE_TABLE, null);
         cursor.moveToFirst();
@@ -84,6 +85,11 @@ public class ListFragment extends Fragment {
         recyclerView.setAdapter(rvAdapter);
     }
 
+    private static int GetNumber(String string, int minValue){
+
+        return string.matches("") ? minValue : Integer.parseInt(string);
+
+    }
 
     @SuppressLint("ValidFragment")
     static class CreateNewTrainingDialog extends DialogFragment {
@@ -91,46 +97,52 @@ public class ListFragment extends Fragment {
         private Context context;
 
         @SuppressLint("ValidFragment")
-        public CreateNewTrainingDialog(Context context){
+        private CreateNewTrainingDialog(Context context){
             this.context = context;
         }
 
         @NonNull
         public Dialog onCreateDialog(Bundle savedInstanceState) {
+
             final AlertDialog.Builder builder = new AlertDialog.Builder(Objects.requireNonNull(context));
             @SuppressLint("InflateParams")
-            final View v = LayoutInflater.from(getContext()).inflate(R.layout.dialog_add_training, null);
-            final EditText name = v.findViewById(R.id.name);
-            final EditText inhale = v.findViewById(R.id.inhale);
-            final EditText exhale = v.findViewById(R.id.exhale);
-            final EditText pauseA = v.findViewById(R.id.pauseA);
-            final EditText pauseB = v.findViewById(R.id.pauseB);
-            final EditText time = v.findViewById(R.id.time);
+            final View view = LayoutInflater.from(getContext()).inflate(R.layout.dialog_training, null);
 
+            final EditText mNameEditText = view.findViewById(R.id.nameEditText);
+            final EditText mInhaleEditText = view.findViewById(R.id.inhaleEditText);
+            final EditText mExhaleEditText = view.findViewById(R.id.exhaleEditText);
+            final EditText mPauseA_EditText = view.findViewById(R.id.pauseA_EditText);
+            final EditText mPauseB_EditText = view.findViewById(R.id.pauseB_EditText);
+            final EditText mTimeEditText = view.findViewById(R.id.timeEditText);
+
+            int numberTraining = trainings.size() + 1;
+            mNameEditText.setText("Тренировка #" + numberTraining);
             builder.setTitle("Новая тренировка:");
             builder.setPositiveButton("Сохранить", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+
                     SQLiteDatabase db = new DataBaseHelper(context).getReadableDatabase();
 
                     db.execSQL("INSERT INTO training_list(name,inhale,pause_a,exhale,pause_b,time) VALUES (" +
-                            "'" + name.getText().toString() + "'," +
-                            Integer.parseInt(inhale.getText().toString()) + "," +
-                            Integer.parseInt(pauseA.getText().toString()) + "," +
-                            Integer.parseInt(exhale.getText().toString()) + "," +
-                            Integer.parseInt(pauseB.getText().toString()) + "," +
-                            Integer.parseInt(time.getText().toString()) + ")");
+                            "'" + mNameEditText.getText().toString() + "'," +
+                            GetNumber(mInhaleEditText.getText().toString(), 4) + "," +
+                            GetNumber(mPauseA_EditText.getText().toString(), 6) + "," +
+                            GetNumber(mExhaleEditText.getText().toString(), 4) + "," +
+                            GetNumber(mPauseB_EditText.getText().toString(), 6) + "," +
+                            GetNumber(mTimeEditText.getText().toString(), 3) + ")");
                     db.close();
 
-                    UpdateList(v);
+                    UpdateList(view);
                 }
+
             }).setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
                 }
             });
-            builder.setView(v);
+            builder.setView(view);
 
 
             return builder.create();
@@ -148,43 +160,45 @@ public class ListFragment extends Fragment {
             this.context = context;
         }
 
-        public void setTraining(Training training){
+        void setTraining(Training training){
             this.training = training;
         }
 
         @NonNull
         public Dialog onCreateDialog(final Bundle savedInstanceState) {
             final android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(context);
-            final View v = LayoutInflater.from(context).inflate(R.layout.dialog_edit_training, null);
-            final EditText name = v.findViewById(R.id.name);
-            final EditText inhale = v.findViewById(R.id.inhale);
-            final EditText exhale = v.findViewById(R.id.exhale);
-            final EditText pauseA = v.findViewById(R.id.pauseA);
-            final EditText pauseB = v.findViewById(R.id.pauseB);
-            final EditText time = v.findViewById(R.id.time);
+            @SuppressLint("InflateParams")
+            final View view = LayoutInflater.from(context).inflate(R.layout.dialog_training, null);
 
-            name.setText(training.get_name());
-            inhale.setText(String.valueOf(training.get_inhale()));
-            exhale.setText(String.valueOf(training.get_exhale()));
-            pauseA .setText(String.valueOf(training.get_pause_a()));
-            pauseB.setText(String.valueOf(training.get_pause_b()));
-            time.setText(String.valueOf(training.get_time()));
+            final EditText sNameEditText = view.findViewById(R.id.nameEditText);
+            final EditText sInhaleEditText = view.findViewById(R.id.inhaleEditText);
+            final EditText sExhaleEditText = view.findViewById(R.id.exhaleEditText);
+            final EditText sPauseA_EditText = view.findViewById(R.id.pauseA_EditText);
+            final EditText sPauseB_EditText = view.findViewById(R.id.pauseB_EditText);
+            final EditText sTimeEditText = view.findViewById(R.id.timeEditText);
 
-            builder.setView(v);
+            sNameEditText.setText(training.get_name());
+            sInhaleEditText.setText(String.valueOf(training.get_inhale()));
+            sExhaleEditText.setText(String.valueOf(training.get_exhale()));
+            sPauseA_EditText .setText(String.valueOf(training.get_pause_a()));
+            sPauseB_EditText.setText(String.valueOf(training.get_pause_b()));
+            sTimeEditText.setText(String.valueOf(training.get_time()));
+
+            builder.setView(view);
             builder.setTitle("Изменить тренировку:")
                     .setPositiveButton("Сохранить", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             SQLiteDatabase sqLiteDatabase = new DataBaseHelper(getContext()).getReadableDatabase();
                             sqLiteDatabase.execSQL("UPDATE training_list SET " +
-                                    DataBaseHelper.KEY_NAME_TRAINING + " = '" + String.valueOf(name.getText().toString()) + "' , " +
-                                    "inhale = " + Integer.parseInt(inhale.getText().toString()) + ", " +
-                                    "pause_a = " + Integer.parseInt(pauseA.getText().toString()) + ", " +
-                                    "exhale = " + Integer.parseInt(exhale.getText().toString()) + ", " +
-                                    "pause_b = " + Integer.parseInt(pauseB.getText().toString()) + ", " +
-                                    "time = " + Integer.parseInt(time.getText().toString()) + " WHERE _id = " + training.get_id());
+                                    DataBaseHelper.KEY_NAME_TRAINING + " = '" + String.valueOf(sNameEditText.getText().toString()) + "' , " +
+                                    "inhale = " + Integer.parseInt(sInhaleEditText.getText().toString()) + ", " +
+                                    "pause_a = " + Integer.parseInt(sExhaleEditText.getText().toString()) + ", " +
+                                    "exhale = " + Integer.parseInt(sPauseA_EditText.getText().toString()) + ", " +
+                                    "pause_b = " + Integer.parseInt(sPauseB_EditText.getText().toString()) + ", " +
+                                    "time = " + Integer.parseInt(sTimeEditText.getText().toString()) + " WHERE _id = " + training.get_id());
                             sqLiteDatabase.close();
-                            UpdateList(v);
+                            UpdateList(view);
                         }
                     }).setNegativeButton("Отмена", null);
 

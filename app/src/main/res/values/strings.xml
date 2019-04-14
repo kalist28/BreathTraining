@@ -3,4 +3,12 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="nameTraining">Название:</string>
+    <string name="nameTraining_hint">название тренировки</string>
+    <string name="Inhale">Вдох:</string>
+    <string name="second">сек.</string>
+    <string name="Exhale">Выдох:</string>
+    <string name="Pause_a">Пауза А:</string>
+    <string name="Time">Время:</string>
+    <string name="Pause_b">Пауза В:</string>
 </resources>

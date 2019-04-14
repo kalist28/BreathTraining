@@ -26,7 +26,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> {
     private Animation animation;
     private ListFragment.EditTrainingDialog dialogFragment;
 
-    public RVAdapter(List<Training> trainings, ListFragment.EditTrainingDialog dialogFragment){
+    RVAdapter(List<Training> trainings, ListFragment.EditTrainingDialog dialogFragment){
         this.trainings = trainings;
         this.dialogFragment = dialogFragment;
     }
@@ -38,6 +38,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> {
         return new ViewHolder(v);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder v, @SuppressLint("RecyclerView") final int i) {
         v.isOpenMenu = false;
