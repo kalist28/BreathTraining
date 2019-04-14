@@ -31,24 +31,23 @@ class Training {
     private int _time;
 
     /**
-     * Конструктор - создание нового объекта с определенными значениями.
-     * Полная инициализация обьекта.
-     * @param _id - уникальный номер тренировки.
-     * @param _name - название тренировки.
-     * @param _inhale - время для вдоха.
-     * @param _exhale - время для выдоха.
-     * @param _pause_a - время паузы после вдоха.
-     * @param _pause_b - время паузы после выдоха.
-     * @param _time - время полной тренировки.
+     * Конструктор - создание нового объекта с полной инициализацией.
+     * @param id - уникальный номер тренировки.
+     * @param name - название тренировки.
+     * @param inhale - время для вдоха.
+     * @param exhale - время для выдоха.
+     * @param pause_a - время паузы после вдоха.
+     * @param pause_b - время паузы после выдоха.
+     * @param time - время полной тренировки.
      */
-    Training(int _id, String _name, int _inhale, int _exhale, int _pause_a, int _pause_b, int _time) {
-        this._id = _id;
-        this._name = _name;
-        this._inhale = _inhale;
-        this._exhale = _exhale;
-        this._pause_a = _pause_a;
-        this._pause_b = _pause_b;
-        this._time = _time;
+    Training(int id, String name, int inhale, int exhale, int pause_a, int pause_b, int time) {
+        this._id = id;
+        this._name = name;
+        this._inhale = inhale;
+        this._exhale = exhale;
+        this._pause_a = pause_a;
+        this._pause_b = pause_b;
+        this._time = time;
     }
 
     /**
