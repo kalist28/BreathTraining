@@ -101,6 +101,7 @@ public class ListFragment extends Fragment {
             this.context = context;
         }
 
+        @SuppressLint("SetTextI18n")
         @NonNull
         public Dialog onCreateDialog(Bundle savedInstanceState) {
 
@@ -177,12 +178,12 @@ public class ListFragment extends Fragment {
             final EditText sPauseB_EditText = view.findViewById(R.id.pauseB_EditText);
             final EditText sTimeEditText = view.findViewById(R.id.timeEditText);
 
-            sNameEditText.setText(training.get_name());
-            sInhaleEditText.setText(String.valueOf(training.get_inhale()));
-            sExhaleEditText.setText(String.valueOf(training.get_exhale()));
-            sPauseA_EditText .setText(String.valueOf(training.get_pause_a()));
-            sPauseB_EditText.setText(String.valueOf(training.get_pause_b()));
-            sTimeEditText.setText(String.valueOf(training.get_time()));
+            sNameEditText.setText(training.getName());
+            sInhaleEditText.setText(String.valueOf(training.getInhale()));
+            sExhaleEditText.setText(String.valueOf(training.getExhale()));
+            sPauseA_EditText .setText(String.valueOf(training.getPause_a()));
+            sPauseB_EditText.setText(String.valueOf(training.getPause_b()));
+            sTimeEditText.setText(String.valueOf(training.getTime()));
 
             builder.setView(view);
             builder.setTitle("Изменить тренировку:")
@@ -196,7 +197,7 @@ public class ListFragment extends Fragment {
                                     "pause_a = " + Integer.parseInt(sExhaleEditText.getText().toString()) + ", " +
                                     "exhale = " + Integer.parseInt(sPauseA_EditText.getText().toString()) + ", " +
                                     "pause_b = " + Integer.parseInt(sPauseB_EditText.getText().toString()) + ", " +
-                                    "time = " + Integer.parseInt(sTimeEditText.getText().toString()) + " WHERE _id = " + training.get_id());
+                                    "time = " + Integer.parseInt(sTimeEditText.getText().toString()) + " WHERE _id = " + training.getId());
                             sqLiteDatabase.close();
                             UpdateList(view);
                         }

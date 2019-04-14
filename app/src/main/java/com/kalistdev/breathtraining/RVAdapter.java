@@ -43,25 +43,25 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull final ViewHolder v, @SuppressLint("RecyclerView") final int i) {
         v.isOpenMenu = false;
         v.linearLayout.setVisibility(View.GONE);
-        v.name.setText(trainings.get(i).get_name());
+        v.name.setText(trainings.get(i).getName());
         v.params.setText("Параметры: " +
-                trainings.get(i).get_inhale() + ", " +
-                trainings.get(i).get_pause_a() + ", " +
-                trainings.get(i).get_exhale() + ", " +
-                trainings.get(i).get_pause_b() + ".");
-        v.time.setText("Время тренировки: " + trainings.get(i).get_time() + " мин.");
+                trainings.get(i).getInhale() + ", " +
+                trainings.get(i).getPause_a() + ", " +
+                trainings.get(i).getExhale() + ", " +
+                trainings.get(i).getPause_b() + ".");
+        v.time.setText("Время тренировки: " + trainings.get(i).getTime() + " мин.");
 
         v.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(!v.isOpenMenu){
                     Intent intent = new Intent(view.getContext(), TrainingActivity.class);
-                    intent.putExtra("Name", trainings.get(i).get_name());
-                    intent.putExtra("AllTime", trainings.get(i).get_time());
-                    intent.putExtra("Inhale",  trainings.get(i).get_inhale());
-                    intent.putExtra("Exhale",  trainings.get(i).get_exhale());
-                    intent.putExtra("Pause_a", trainings.get(i).get_pause_a());
-                    intent.putExtra("Pause_b", trainings.get(i).get_pause_b());
+                    intent.putExtra("Name", trainings.get(i).getName());
+                    intent.putExtra("AllTime", trainings.get(i).getTime());
+                    intent.putExtra("Inhale",  trainings.get(i).getInhale());
+                    intent.putExtra("Exhale",  trainings.get(i).getExhale());
+                    intent.putExtra("Pause_a", trainings.get(i).getPause_a());
+                    intent.putExtra("Pause_b", trainings.get(i).getPause_b());
                     view.getContext().startActivity(intent);
                 }else{
                     v.linearLayout.setVisibility(View.GONE);
@@ -90,7 +90,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> {
             public void onClick(View view) {
                 SQLiteDatabase sqLiteDatabase = new DataBaseHelper(view.getContext()).getReadableDatabase();
                 sqLiteDatabase.execSQL("DELETE FROM " + DataBaseHelper.DATABASE_TABLE +
-                        " WHERE " + DataBaseHelper.KEY_ID + " = " + trainings.get(i).get_id());
+                        " WHERE " + DataBaseHelper.KEY_ID + " = " + trainings.get(i).getId());
                 sqLiteDatabase.close();
                 v.cardView.setVisibility(View.GONE);
             }
