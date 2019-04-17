@@ -1,9 +1,12 @@
 package com.kalistdev.breathtraining;
 
 /**
+ * Breath Training Application
+ *
+ * This file is part of the Breath Training package.
  * The class describes object square technique breathing exercises.
  *
- * @author Dmitriy Kalistratov kalistratov.d.m@gmail.com
+ * @author Dmitriy Kalistratov <kalistratov.d.m@gmail.com>
  * @version 1.0
  */
 class Training {
@@ -31,6 +34,7 @@ class Training {
 
     /**
      * Constructor - create a new object with full initialization.
+     *
      * @param id - уникальный номер тренировки.
      * @param name - название тренировки.
      * @param inhale - время для вдоха.

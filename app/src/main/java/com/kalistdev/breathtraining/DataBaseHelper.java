@@ -4,41 +4,37 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+/**
+ * Breath Training Application
+ *
+ * This file is part of the Breath Training package.
+ * This class assistant for work SQL DataBase.
+ *
+ * @author Dmitriy Kalistratov <kalistratov.d.m@gmail.com>
+ * @version 1.0
+ */
 public class DataBaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "training_db.db";
-    public static final String DATABASE_TABLE = "training_list";
-    public static final int DATABASE_VERSION = 1;
 
-    public static final String KEY_ID = "_id";
-    public static final String KEY_NAME_TRAINING = "name";
-    public static final String KEY_INHALE = "inhale"; //Вдох
-    public static final String KEY_EXHALE = "exhale"; //Выдох
-    public static final String KEY_PAUSE_A = "pause_a"; //первая пауза
-    public static final String KEY_PAUSE_B = "pause_b"; //вторая пауза
-    public static final String KEY_TIME = "time"; //вторая пауза
-
-    private static final String DATABASE_CREATE =
-            "create table " + DATABASE_TABLE + " (" +
-                    KEY_ID + " integer primary key autoincrement, " +
-                    KEY_NAME_TRAINING + " text, " +
-                    KEY_INHALE + " integer, " +
-                    KEY_EXHALE + " integer, " +
-                    KEY_PAUSE_A + " integer, " +
-                    KEY_PAUSE_B + " integer, " +
-                    KEY_TIME + " integer)";
-
-    public DataBaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    /**
+     * Constructor - create a new object.
+     * @param context application context.
+     */
+    DataBaseHelper(final Context context) {
+        super(context, DataBaseField.DATABASE_NAME.getValue(),
+                null,
+                Integer.valueOf(DataBaseField.DATABASE_VERSION.getValue()));
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL(DATABASE_CREATE);
-
+    public final void onCreate(final SQLiteDatabase db) {
+        db.execSQL(DataBaseField.DATABASE_CREATE.getValue());
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop table if exists " + DATABASE_TABLE);
+    public final void onUpgrade(final SQLiteDatabase db,
+                          final int oldVersion,
+                          final int newVersion) {
+        db.execSQL("drop table if exists "
+                + DataBaseField.DATABASE_TABLE.getValue());
     }
 }
