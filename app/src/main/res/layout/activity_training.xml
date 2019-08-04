@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TrainingActivity">
+    tools:context=".training.TrainingActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Тренировка:"
+                    android:text="@string/training"
                     android:textSize="18sp"
                     android:gravity="center"
                     android:paddingTop="8sp"/>
@@ -33,12 +33,10 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:paddingBottom="8sp"
-                    android:text="ЛЕГкАЯ"
                     android:textColor="@color/colorPrimary"
                     android:textAllCaps="true"
                     android:textSize="25sp"
                     android:textStyle="bold" />
-
 
                 <View
                     android:layout_width="fill_parent"
@@ -61,8 +59,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:lineSpacingExtra="5sp"
+                    android:background="#E2F7FAFA"
                     android:padding="10sp"
-                    android:text="Время тренировки: 6 минут.\nПрошло: 6 минут.\nОсталось: 6 минут."
                     android:textSize="18sp" />
                 <View
                     android:layout_width="fill_parent"
@@ -138,8 +136,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:lineSpacingExtra="5sp"
+                    android:background="#E2F7FAFA"
                     android:padding="10sp"
-                    android:text="Вдохов: 5 шт. \nВыдохов 4 шт. \nПауз 7 шт."
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -153,12 +151,21 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginBottom="63sp"
-        android:layout_marginRight="10sp"
-        android:layout_marginLeft="10sp"
-        android:background="@drawable/button_shape"
+        android:background="#45688E"
         android:text="STOP"
         android:textColor="@color/colorWhite"
         android:textSize="25sp"
         android:textStyle="bold" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3171253839600710/7199160257">
+    </com.google.android.gms.ads.AdView>
 
 </FrameLayout>

@@ -12,169 +12,45 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/nameTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="@string/nameTraining"
+            android:text="@string/NameTraining"
             android:textSize="20sp"/>
 
         <EditText
-            android:id="@+id/nameEditText"
+            android:id="@+id/dialog_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/nameTraining_hint"
             android:ems="10"
+            android:layout_marginLeft="10dp"
             android:maxLength="18"
             android:inputType="text"/>
     </LinearLayout>
 
-    <LinearLayout
+    <com.kalistdev.breathtraining.widget.ParameterInput
+        android:id="@+id/dialog_inhale"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"/>
 
-        <TextView
-            android:id="@+id/inhaleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Inhale"
-            android:textSize="20sp"/>
-
-        <EditText
-            android:id="@+id/inhaleEditText"
-            android:layout_width="50sp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="4"
-            android:maxLength="2"
-            android:inputType="number"
-            android:layout_marginLeft="38sp"
-            android:layout_marginRight="10sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/second"
-            android:textSize="20sp"/>
-    </LinearLayout>
-
-    <LinearLayout
+    <com.kalistdev.breathtraining.widget.ParameterInput
+        android:id="@+id/dialog_pauseA"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"/>
 
-        <TextView
-            android:id="@+id/pauseA_TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Pause_a"
-            android:textSize="20sp"/>
-
-        <EditText
-            android:id="@+id/pauseA_EditText"
-            android:layout_width="50sp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="6"
-            android:maxLength="2"
-            android:inputType="number"
-            android:layout_marginHorizontal="10sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/second"
-            android:textSize="20sp"/>
-    </LinearLayout>
-
-    <LinearLayout
+    <com.kalistdev.breathtraining.widget.ParameterInput
+        android:id="@+id/dialog_exhale"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"/>
 
-        <TextView
-            android:id="@+id/exhaleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Exhale"
-            android:textSize="20sp"/>
-
-        <EditText
-            android:id="@+id/exhaleEditText"
-            android:layout_width="50sp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="4"
-            android:maxLength="2"
-            android:inputType="number"
-            android:layout_marginLeft="23sp"
-            android:layout_marginRight="10sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/second"
-            android:textSize="20sp"/>
-    </LinearLayout>
-
-    <LinearLayout
+    <com.kalistdev.breathtraining.widget.ParameterInput
+        android:id="@+id/dialog_pauseB"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"/>
 
-        <TextView
-            android:id="@+id/pauseB_TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Pause_b"
-            android:textSize="20sp"/>
-
-        <EditText
-            android:id="@+id/pauseB_EditText"
-            android:layout_width="50sp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="6"
-            android:maxLength="2"
-            android:inputType="number"
-            android:layout_marginLeft="10.5sp"
-            android:layout_marginRight="10sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/second"
-            android:textSize="20sp"/>
-    </LinearLayout>
-
-    <LinearLayout
+    <com.kalistdev.breathtraining.widget.ParameterInput
+        android:id="@+id/dialog_time"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/timeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Time"
-            android:textSize="20sp"/>
-
-        <EditText
-            android:id="@+id/timeEditText"
-            android:layout_width="50sp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="3"
-            android:maxLength="2"
-            android:inputType="number"
-            android:layout_marginLeft="24sp"
-            android:layout_marginRight="10sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" мин."
-            android:textSize="20sp"/>
-    </LinearLayout>
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/stars_manager_top_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Оцени тренировку:"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:paddingTop="8sp"
+            android:paddingBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stars_manager_star_one"
+                    android:background="@color/colorTransparent"
+                    android:scaleType="centerCrop"
+                    android:layout_width="@dimen/activity_finishing_image_star_width"
+                    android:layout_height="@dimen/activity_finishing_image_star_height"
+                    android:layout_margin="10dp"/>
+
+                <ImageButton
+                    android:id="@+id/stars_manager_star_two"
+                    android:background="@color/colorTransparent"
+                    android:scaleType="centerCrop"
+                    android:layout_width="@dimen/activity_finishing_image_star_width"
+                    android:layout_height="@dimen/activity_finishing_image_star_height"
+                    android:layout_margin="10dp"/>
+
+                <ImageButton
+                    android:id="@+id/stars_manager_star_three"
+                    android:background="@color/colorTransparent"
+                    android:scaleType="centerCrop"
+                    android:layout_width="@dimen/activity_finishing_image_star_width"
+                    android:layout_height="@dimen/activity_finishing_image_star_height"
+                    android:layout_margin="10dp"/>
+
+                <ImageButton
+                    android:id="@+id/stars_manager_star_four"
+                    android:background="@color/colorTransparent"
+                    android:scaleType="centerCrop"
+                    android:layout_width="@dimen/activity_finishing_image_star_width"
+                    android:layout_height="@dimen/activity_finishing_image_star_height"
+                    android:layout_margin="10dp"/>
+
+                <ImageButton
+                    android:id="@+id/stars_manager_star_five"
+                    android:background="@color/colorTransparent"
+                    android:scaleType="centerCrop"
+                    android:layout_width="@dimen/activity_finishing_image_star_width"
+                    android:layout_height="@dimen/activity_finishing_image_star_height"
+                    android:layout_margin="10dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/stars_manager_bottom_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="сложно"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:paddingTop="8sp"
+            android:paddingBottom="8dp"/>
+
+</LinearLayout>

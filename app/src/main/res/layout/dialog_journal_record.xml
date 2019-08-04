@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+
+                <TextView
+                    android:id="@+id/dialog_journal_name_training"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Средний уровень."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="28sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/dialog_journal_params"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Параметры: 1, 2, 6, 8."
+                    android:layout_marginRight="16sp"
+                    android:layout_marginLeft="16sp"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="15dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Количество выполнений:"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <com.kalistdev.breathtraining.widget.ParameterInfo
+                    android:id="@+id/dialog_inhale"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"/>
+
+                <com.kalistdev.breathtraining.widget.ParameterInfo
+                    android:id="@+id/dialog_pauseA"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"/>
+
+                <com.kalistdev.breathtraining.widget.ParameterInfo
+                    android:id="@+id/dialog_exhale"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"/>
+
+                <com.kalistdev.breathtraining.widget.ParameterInfo
+                    android:id="@+id/dialog_pauseB"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"/>
+
+                <com.kalistdev.breathtraining.widget.ParameterInfo
+                    android:id="@+id/dialog_time"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Комментарий:"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/dialog_journal_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="2"
+                    android:maxLines="4"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="15sp"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginBottom="20dp"
+                    android:background="#F3F3F3"
+                    android:textSize="18sp"
+                    android:gravity="start"
+                    android:layout_gravity="center_vertical"/>
+
+            <com.kalistdev.breathtraining.widget.StarsManager
+                    android:id="@+id/dialog_journal_stars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+</LinearLayout>

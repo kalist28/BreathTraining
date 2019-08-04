@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">                    Breath training</string>
+    <string name="title_home">                  Home</string>
+    <string name="title_dashboard">             Dashboard</string>
+    <string name="title_notifications">         Notifications</string>
+    <string name="NameTraining">                Name:</string>
+    <string name="nameTraining_hint">           training name</string>
+    <string name="Inhale">                      Inhale:</string>
+    <string name="second">                      sec.</string>
+    <string name="Exhale">                      Exhale:</string>
+    <string name="Time">                        Time:</string>
+    <string name="Expected"><b>                 Warning!</b> <p> \n On different devices when the screen is locked, the application with the training mode enabled works differently , there may be delays and vibration shutdown by the system itself!</p></string>
+    <string name="average_level">               Average level.</string>
+    <string name="training_number">             Training #</string>
+    <string name="new_training">                New training:</string>
+    <string name="save">                        Save</string>
+    <string name="edit_training">               Edit training:</string>
+    <string name="cancellation">                Cancel</string>
+    <string name="characteristic">              Characteristic:</string>
+    <string name="Training_time">               Training time:</string>
+    <string name="minutes">                     min.</string>
+    <string name="start_after_caps">            START AFTER</string>
+    <string name="pause">                       pause</string>
+    <string name="inhale_caps">                 INHALE</string>
+    <string name="inhale">                      inhale</string>
+    <string name="exhale">                      exhale</string>
+    <string name="click_to_stop">               Click more to stop.</string>
+    <string name="passed">                      Passed:</string>
+    <string name="remained">                    Remained:</string>
+    <string name="inhales">                     Inhales:</string>
+    <string name="exhales">                     Exhales:</string>
+    <string name="pauses">                      Pauses:</string>
+    <string name="information">                 Information</string>
+    <string name="trainings">                   Trainings</string>
+    <string name="Pause_after_inhale">          Pause А:</string>
+    <string name="Pause_after_exhale">          Pause В:</string>
+    <string name="edit">                        edit</string>
+    <string name="delete">                      delete</string>
+</resources>
