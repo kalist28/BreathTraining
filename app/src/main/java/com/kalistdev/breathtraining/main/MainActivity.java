@@ -1,6 +1,9 @@
 package com.kalistdev.breathtraining.main;
 
+import java.sql.SQLDataException;
 import java.util.Objects;
+
+import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
 import android.view.MenuItem;
 import com.kalistdev.breathtraining.R;
@@ -29,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView.OnNavigationItemSelectedListener
             mOnNavigationItemListener
                 = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
         @Override
         public boolean onNavigationItemSelected(final MenuItem item) {
             switch (item.getItemId()) {
@@ -104,10 +106,11 @@ public class MainActivity extends AppCompatActivity {
                 pauseA  = 3,
                 pauseB  = 5,
                 time    = 6;
+
         if (Training.listAll(Training.class).size() == 0) {
             Training training
                     = new Training(
-                            getString(R.string.average_level),
+                    getString(R.string.average_level),
                     inhale,
                     exhale,
                     pauseA,

@@ -1,6 +1,10 @@
 package com.kalistdev.breathtraining.widget;
 
 import java.util.List;
+
+import android.app.Activity;
+import android.util.Log;
+import android.view.Display;
 import android.view.View;
 import java.util.ArrayList;
 import android.content.Context;
@@ -10,6 +14,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.view.LayoutInflater;
+import androidx.annotation.Dimension;
 import com.kalistdev.breathtraining.R;
 
 /**
@@ -175,6 +180,23 @@ public class StarsManager extends FrameLayout implements View.OnClickListener {
         for (ImageButton button : stars) {
             button.setLayoutParams(params);
         }
+    }
+    static final String TAG = "TAG AUTO SIZE";
+    public void setAutoSizeStar(Activity activity) {
+        Display display = activity.getWindowManager().getDefaultDisplay();
+        float density = getContext().getResources().getDisplayMetrics().density;
+        int wight = display.getWidth();
+        Log.d(TAG, wight + "  wight");
+        wight /= density;
+        Log.d(TAG, wight + "  wight");
+        int one = ( 60 * wight ) / 100;
+        Log.d(TAG, one + "  one");
+        int two = (3 * one) / 100;
+        Log.d(TAG, two + "  two");
+        one = one - (two * 4);
+
+        Log.d(TAG, one + "  one2");
+        setSizeStar(one / 5 ,two);
     }
 
     /** Set clickable property.

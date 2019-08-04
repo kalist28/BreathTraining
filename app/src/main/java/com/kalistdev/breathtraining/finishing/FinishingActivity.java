@@ -77,7 +77,7 @@ public class FinishingActivity extends AppCompatActivity {
                 .getNumberExecutions();
 
         setNameTraining(getIntent().getStringExtra("TName"));
-        setTotalTimeInfo(parametersManager.getTotalTime());
+        setTotalTimeInfo();
         setParametersInfo(countInhale,
                 countExhale,
                 countPauseAfterInhale,
@@ -114,14 +114,11 @@ public class FinishingActivity extends AppCompatActivity {
         textView.setText(info);
     }
 
-    /** Set total time on layout.
-     *
-     * @param seconds - total time in seconds.
-     */
-    private void setTotalTimeInfo(final int seconds) {
+    /** Set total time on layout. */
+    private void setTotalTimeInfo() {
         TextView textView = findViewById(R.id.activity_finishing_time_info);
         textView.setText("Сегодня ты тренеровался: "
-                         + new Stopwatch(seconds).getTime());
+                         + new Stopwatch(parametersManager.getTotalTime()).getTime());
     }
 
     /** Save new training. */

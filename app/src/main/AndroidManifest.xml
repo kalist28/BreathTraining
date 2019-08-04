@@ -18,8 +18,9 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3171253839600710~1315320324" />
 
-        <meta-data android:name="DATABASE" android:value="BreathTraining.db" />
-        <meta-data android:name="VERSION" android:value="2" />
+        <meta-data android:name="DATABASE"
+            android:value="BreathTrainingDatabase.db" />
+        <meta-data android:name="VERSION" android:value="3" />
         <meta-data android:name="QUERY_LOG" android:value="true" />
         <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.kalistdev.breathtraining" />
 

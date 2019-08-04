@@ -36,7 +36,7 @@ public class Stopwatch {
      */
     public Stopwatch(final int sec) {
         this.typeCount  = true;
-        setSeconds(seconds);
+        setSeconds(sec);
     }
 
     /**

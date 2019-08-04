@@ -156,6 +156,7 @@ public class JournalDialog extends DialogFragment {
     private void setStarsManager(final View v) {
         StarsManager starsManager
                 = v.findViewById(R.id.dialog_journal_stars);
+        starsManager.setAutoSizeStar(getActivity());
         starsManager.setStars(mJournal.getCountStars());
         starsManager.hideAllText();
         starsManager.setClickable(false);
