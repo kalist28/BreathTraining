@@ -185,17 +185,13 @@ public class StarsManager extends FrameLayout implements View.OnClickListener {
     public void setAutoSizeStar(Activity activity) {
         Display display = activity.getWindowManager().getDefaultDisplay();
         float density = getContext().getResources().getDisplayMetrics().density;
-        int wight = display.getWidth();
-        Log.d(TAG, wight + "  wight");
-        wight /= density;
-        Log.d(TAG, wight + "  wight");
+        int wight = (int) (display.getWidth() / density );
+        //Выделяем 60% под отображение всех звезд
         int one = ( 60 * wight ) / 100;
-        Log.d(TAG, one + "  one");
+        //Выделяем по 3% под растояние между звездами
         int two = (3 * one) / 100;
-        Log.d(TAG, two + "  two");
+        //Получаем чистое значение под звезды
         one = one - (two * 4);
-
-        Log.d(TAG, one + "  one2");
         setSizeStar(one / 5 ,two);
     }
 
