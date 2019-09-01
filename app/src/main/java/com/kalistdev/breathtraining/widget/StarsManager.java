@@ -3,7 +3,6 @@ package com.kalistdev.breathtraining.widget;
 import java.util.List;
 
 import android.app.Activity;
-import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import java.util.ArrayList;
@@ -14,7 +13,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.view.LayoutInflater;
-import androidx.annotation.Dimension;
 import com.kalistdev.breathtraining.R;
 
 /**

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Gravity;
 import android.os.AsyncTask;
+import android.widget.RatingBar;
 import android.widget.Toast;
 import com.google.gson.Gson;
 import android.view.KeyEvent;

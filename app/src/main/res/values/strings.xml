@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">                    Тренировка дыхания</string>
-    <string name="title_home">                  Home</string>
-    <string name="title_dashboard">             Dashboard</string>
-    <string name="title_notifications">         Notifications</string>
     <string name="NameTraining">                Название</string>
     <string name="nameTraining_hint">           название тренировки</string>
     <string name="Inhale">                      Вдох</string>
     <string name="Exhale">                      Выдох</string>
     <string name="Time">                        Время</string>
+    <string name="inhale_caps">                 ВДОХ</string>
+    <string name="inhale">                      вдох</string>
+    <string name="exhale">                      выдох</string>
     <string name="Pause_after_inhale">          Пауза 1</string>
     <string name="Pause_after_exhale">          Пауза 2</string>
+    <string name="pause">                       пауза</string>
     <string name="Expected"><b>                 Предупреждение!</b> <p> \nНа разных устройствах при заблокированном экране приложение с включенным режимом тренировки работает по разному , возможны задержки и отключение вибрацией самой системой!</p></string>
     <string name="average_level">               Средний уровень.</string>
     <string name="training_number">             Тренировка #</string>
@@ -23,10 +24,6 @@
     <string name="second">                      сек.</string>
     <string name="minutes">                     мин.</string>
     <string name="start_after_caps">            НАЧАЛО ЧЕРЕЗ </string>
-    <string name="pause">                       пауза</string>
-    <string name="inhale_caps">                 ВДОХ</string>
-    <string name="inhale">                      вдох</string>
-    <string name="exhale">                      выдох</string>
     <string name="click_to_stop">               Нажмите еще для остановки.</string>
     <string name="passed">                      Прошло</string>
     <string name="remained">                    Осталось</string>
@@ -39,7 +36,7 @@
     <string name="delete">                      удалить</string>
     <string name="training">                    Тренировка:</string>
     <string name="end_training">                Конец тренировки: </string>
-    <string name="navigation_journal">Журнал</string>
+    <string name="navigation_journal">          Журнал</string>
     <string-array name="levels">
         <item>очень сложно</item>
         <item>сложно</item>
