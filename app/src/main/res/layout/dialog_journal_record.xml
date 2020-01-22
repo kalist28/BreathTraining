@@ -40,31 +40,31 @@
                     android:textSize="18sp"
                     android:layout_gravity="center_vertical"/>
 
-                <com.kalistdev.breathtraining.widget.ParameterInfo
+                <com.kalistdev.breathtraining2.widget.ParameterInfo
                     android:id="@+id/dialog_inhale"
                     android:layout_marginLeft="20dp"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"/>
 
-                <com.kalistdev.breathtraining.widget.ParameterInfo
+                <com.kalistdev.breathtraining2.widget.ParameterInfo
                     android:id="@+id/dialog_pauseA"
                     android:layout_marginLeft="20dp"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"/>
 
-                <com.kalistdev.breathtraining.widget.ParameterInfo
+                <com.kalistdev.breathtraining2.widget.ParameterInfo
                     android:id="@+id/dialog_exhale"
                     android:layout_marginLeft="20dp"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"/>
 
-                <com.kalistdev.breathtraining.widget.ParameterInfo
+                <com.kalistdev.breathtraining2.widget.ParameterInfo
                     android:id="@+id/dialog_pauseB"
                     android:layout_marginLeft="20dp"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"/>
 
-                <com.kalistdev.breathtraining.widget.ParameterInfo
+                <com.kalistdev.breathtraining2.widget.ParameterInfo
                     android:id="@+id/dialog_time"
                     android:layout_marginLeft="20dp"
                     android:layout_width="250dp"
@@ -95,7 +95,7 @@
                     android:gravity="start"
                     android:layout_gravity="center_vertical"/>
 
-            <com.kalistdev.breathtraining.widget.StarsManager
+            <com.kalistdev.breathtraining2.widget.StarsManager
                     android:id="@+id/dialog_journal_stars"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>

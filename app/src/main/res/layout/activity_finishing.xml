@@ -51,12 +51,12 @@
             android:padding="10sp"
             android:textSize="18sp" />
 
-        <com.kalistdev.breathtraining.widget.StarsManager
+        <com.kalistdev.breathtraining2.widget.StarsManager
             android:id="@+id/StarsManager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        </com.kalistdev.breathtraining.widget.StarsManager>
+        </com.kalistdev.breathtraining2.widget.StarsManager>
 
         <TextView
             android:id="@+id/activity_finishing_time_info"

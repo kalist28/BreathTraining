@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kalistdev.breathtraining">
+    package="com.kalistdev.breathtraining2">
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -22,14 +22,15 @@
             android:value="BreathTrainingDatabase.db" />
         <meta-data android:name="VERSION" android:value="3" />
         <meta-data android:name="QUERY_LOG" android:value="true" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.kalistdev.breathtraining" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.kalistdev.breathtraining2" />
 
         <activity
-            android:name=".main.MainActivity"
+            android:name="com.kalistdev.breathtraining2.main.MainActivity"
             android:label="@string/app_name">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".main.MainActivity" />
+                android:value="com.kalistdev.breathtraining2.main.MainActivity" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,9 +38,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".training.TrainingActivity" />
+        <activity android:name="com.kalistdev.breathtraining2.training.TrainingActivity" />
         <activity
-            android:name=".finishing.FinishingActivity"
+            android:name="com.kalistdev.breathtraining2.finishing.FinishingActivity"
             android:windowSoftInputMode="adjustPan"/>
 
     </application>

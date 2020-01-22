@@ -28,27 +28,27 @@
             android:inputType="text"/>
     </LinearLayout>
 
-    <com.kalistdev.breathtraining.widget.ParameterInput
+    <com.kalistdev.breathtraining2.widget.ParameterInput
         android:id="@+id/dialog_inhale"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <com.kalistdev.breathtraining.widget.ParameterInput
+    <com.kalistdev.breathtraining2.widget.ParameterInput
         android:id="@+id/dialog_pauseA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <com.kalistdev.breathtraining.widget.ParameterInput
+    <com.kalistdev.breathtraining2.widget.ParameterInput
         android:id="@+id/dialog_exhale"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <com.kalistdev.breathtraining.widget.ParameterInput
+    <com.kalistdev.breathtraining2.widget.ParameterInput
         android:id="@+id/dialog_pauseB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <com.kalistdev.breathtraining.widget.ParameterInput
+    <com.kalistdev.breathtraining2.widget.ParameterInput
         android:id="@+id/dialog_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

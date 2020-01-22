@@ -52,7 +52,7 @@
                     android:textSize="18sp"
                     android:layout_gravity="center_vertical"/>
 
-                <com.kalistdev.breathtraining.widget.StarsManager
+                <com.kalistdev.breathtraining2.widget.StarsManager
                     android:id="@+id/element_journal_stars"
                     android:layout_width="200dp"
                     android:layout_height="40dp"
